@@ -25,10 +25,15 @@ public class Zad4 : MonoBehaviour
 
         // wykonujemy rotację wokół osi Y
         player.Rotate(Vector3.up * mouseXMove);
-
+        
         // a dla osi X obracamy kamerę dla lokalnych koordynatów
         // -mouseYMove aby uniknąć ofektu mouse inverse
         transform.Rotate(new Vector3(-mouseYMove, 0f, 0f), Space.Self);
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f);
+
+
+
+
 
     }
 }
