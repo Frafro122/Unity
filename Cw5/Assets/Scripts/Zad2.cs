@@ -11,7 +11,6 @@ public class Zad2 : MonoBehaviour
     private bool isRunningRight = false;
     private float leftPosition;
     private float rightPosition;
-    // Start is called before the first frame update
     void Start()
     {
         rightPosition = transform.position.z + distance;
@@ -26,7 +25,6 @@ public class Zad2 : MonoBehaviour
             elevatorSpeed = -elevatorSpeed;
             isRunning = true;
         }
-
         if (isRunningRight && transform.position.z >= rightPosition)
         {
             isRunning = false;

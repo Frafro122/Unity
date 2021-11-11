@@ -25,7 +25,6 @@ public class Zad1 : MonoBehaviour
             elevatorSpeed = -elevatorSpeed;
             isRunning = true;
         }
-        
         if (isRunningRight && transform.position.x >= rightPosition)
         {
             isRunning = false;
@@ -54,6 +53,10 @@ public class Zad1 : MonoBehaviour
             }
             isRunning = true;
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        other.gameObject.transform.parent = transform;
     }
     private void OnTriggerExit(Collider other)
     {

@@ -16,7 +16,6 @@ public class Zad3 : MonoBehaviour
             Debug.Log("You have to input min 1 vectors to start trace");
             enabled = false;
         }
-            
         else
         {
             start = transform.position;
@@ -39,7 +38,6 @@ public class Zad3 : MonoBehaviour
             else
                 Debug.Log("That was last waypoint");
         }
-            
         if (isRunning)
         {
             Vector3 move = (end - start).normalized * elevatorSpeed * Time.deltaTime;
@@ -48,15 +46,11 @@ public class Zad3 : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (waypoints.Count > 0)
-        {
             if (other.gameObject.CompareTag("Player"))
             {
                 other.gameObject.transform.parent = transform;
                 isRunning = true;
                 Debug.Log("Starting following waypoints");
-            }
-        }
-        
+            }     
     }
 }
