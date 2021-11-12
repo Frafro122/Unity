@@ -517,7 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints:
   - {x: 0, y: 5, z: 0}
-  - {x: 13, y: 20, z: 5}
+  - {x: 0, y: 3, z: 0}
 --- !u!54 &646365113
 Rigidbody:
   m_ObjectHideFlags: 0

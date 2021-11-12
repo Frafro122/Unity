@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Zad3 : MonoBehaviour
 {
-    private float elevatorSpeed = 2f;
+    private float elevatorSpeed = 5f;
     private bool isRunning = false;
     public List<Vector3> waypoints;
     private Vector3 start;
     private Vector3 end;
+    private int index = 2;
+    private bool reversed = false;
     void Start()
     {
         if (waypoints.Count < 1)
@@ -18,26 +20,50 @@ public class Zad3 : MonoBehaviour
         }
         else
         {
-            start = transform.position;
-            end = waypoints[0];
-            waypoints.Remove(waypoints[0]);
+            waypoints.Insert(0, transform.position);
+            start = waypoints[0];
+            end = waypoints[1];
         }
     }
     void Update()
     {
-        if (Vector3.Distance(transform.position, end) <= 0.01f)
+        if(isRunning)
         {
-            isRunning = false;
-            if (waypoints.Count > 0)
+            if (Vector3.Distance(transform.position, end) <= 0.1f)
             {
-                start = end;
-                end = waypoints[0];
-                waypoints.Remove(waypoints[0]);
-                isRunning = true;
+                isRunning = false;
+                if (index < waypoints.Count)
+                {
+                    start = end;
+                    end = waypoints[index];
+                    index++;
+                    isRunning = true;
+                }
+                else
+                {
+                    isRunning = false;
+                    if (reversed==false)
+                    {
+                        waypoints.Reverse();
+                        start = waypoints[0];
+                        end = waypoints[1];
+                        index = 2;
+                        reversed = true;
+                        isRunning = true;
+                    }
+                    else
+                    {
+                        waypoints.Reverse();
+                        start = waypoints[0];
+                        end = waypoints[1];
+                        index = 2;
+                        isRunning = false;
+                        reversed = false;
+                    }
+                }
             }
-            else
-                Debug.Log("That was last waypoint");
         }
+        
         if (isRunning)
         {
             Vector3 move = (end - start).normalized * elevatorSpeed * Time.deltaTime;
