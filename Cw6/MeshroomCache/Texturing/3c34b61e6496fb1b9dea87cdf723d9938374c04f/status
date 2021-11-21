@@ -1,0 +1,18 @@
+{
+    "status": "SUCCESS",
+    "execMode": "LOCAL",
+    "nodeName": "Texturing_1",
+    "nodeType": "Texturing",
+    "packageName": "aliceVision",
+    "packageVersion": null,
+    "graph": "",
+    "commandLine": "aliceVision_texturing  --input \"C:/Users/HP/Desktop/Wersjav3/MeshroomCache/Meshing/c446266083e637dc53034cb62822eb62063ae57a/densePointCloud.abc\" --imagesFolder \"C:/Users/HP/Desktop/Wersjav3/MeshroomCache/PrepareDenseScene/e865ebe5a812adb5a40f273ee6bb4de560bd3bd6\" --inputMesh \"C:/Users/HP/Desktop/Wersjav3/MeshroomCache/MeshFiltering/d7078d9308918571ce025a8fbbcc1e3df76c76c5/mesh.obj\" --textureSide 8192 --downscale 2 --outputTextureFileType png --unwrapMethod Basic --useUDIM True --fillHoles False --padding 5 --multiBandDownscale 4 --multiBandNbContrib 1 5 10 0 --useScore True --bestScoreThreshold 0.1 --angleHardThreshold 90.0 --processColorspace sRGB --correctEV False --forceVisibleByAllVertices False --flipNormals False --visibilityRemappingMethod PullPush --subdivisionTargetRatio 0.8 --verboseLevel info --output \"C:/Users/HP/Desktop/Wersjav3/MeshroomCache/Texturing/3c34b61e6496fb1b9dea87cdf723d9938374c04f\"",
+    "env": null,
+    "startDateTime": "2021-11-21 15:47:26.233242",
+    "endDateTime": "2021-11-21 15:47:58.014138",
+    "elapsedTime": 31.77992033958435,
+    "hostname": "Przemek",
+    "sessionUid": "155530cc-4ad9-11ec-ab38-48ba4e5cace0",
+    "returnCode": 0,
+    "elapsedTimeStr": "0:00:31.779920"
+}
