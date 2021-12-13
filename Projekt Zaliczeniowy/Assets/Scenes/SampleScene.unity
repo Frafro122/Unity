@@ -33399,6 +33399,8 @@ GameObject:
   m_Component:
   - component: {fileID: 593335881}
   - component: {fileID: 593335880}
+  - component: {fileID: 593335883}
+  - component: {fileID: 593335882}
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -33471,6 +33473,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &593335882
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593335879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b10df56069da029478a699c9d40936b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &593335883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593335879}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65004fc4ccdb1c549aca294f90d3383b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &594418412
 GameObject:
   m_ObjectHideFlags: 0
@@ -38722,6 +38755,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldBlock (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016760573753453106, guid: b6c69ea51087c8e48b90f2e156173086,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178460965798365498, guid: b6c69ea51087c8e48b90f2e156173086,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c69ea51087c8e48b90f2e156173086, type: 3}
@@ -100548,7 +100591,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815404678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -3, z: 0}
+  m_LocalPosition: {x: -2, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1064136167}
