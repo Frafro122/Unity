@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    int score = 0;
+    public int score = 0;
     private Text theText;
     private List<int> numbers = new List<int>();
     // Start is called before the first frame update
