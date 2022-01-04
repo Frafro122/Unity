@@ -12,6 +12,8 @@ public class Goomba : MonoBehaviour
     public Animator scoreanimator;
     public BoxCollider2D trigger;
     public BoxCollider2D collider;
+    public LayerMask whatIsWall;
+    public Transform wallcheck;
     public bool start = false;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,22 @@ public class Goomba : MonoBehaviour
     void Update()
     {
         if(start)
+        {
+            bool hittingWall = Physics2D.OverlapCircle(wallcheck.position, 0.3f, whatIsWall);
+            if (hittingWall)
+            {
+                speed = -speed;
+            }
+            if(speed < 0)
+            {
+                transform.eulerAngles = Vector3.zero;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
             rb.velocity = new Vector2(speed, rb.velocity.y);
+        }
         else
         {
             float dist = Mathf.Abs(transform.position.x - player.transform.position.x);
@@ -40,8 +57,10 @@ public class Goomba : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.position.y >= transform.position.y)
+        if(collision.gameObject.tag == "Enemy")
+        {
             speed = -speed;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
